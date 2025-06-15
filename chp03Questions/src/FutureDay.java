@@ -33,6 +33,7 @@ public class FutureDay {
                 System.out.println("cumartesi");
                 break;
         }
+
         System.out.println(" öğrenmek istediğiniz gün : ");
        switch (futureDay) {
            case 0:
