@@ -24,7 +24,6 @@ public class isbnNumber {
          remaining =  remaining % 10 ;
         int d9 = remaining;
 
-
         int d10 = (d1 + d2 * 2 + d3 * 3 + d4 * 4 + d5 * 5 + d6 * 6 + d7 * 7 + d8 * 8 + d9 * 9)% 11 ;
 
         if  (d10 == 10){
