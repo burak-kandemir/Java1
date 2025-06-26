@@ -1,6 +1,6 @@
 package cp05Questions;
 
-import java.util.Scanner;
+
 
 public class ComputeE {
     public static void main(String[] args) {
