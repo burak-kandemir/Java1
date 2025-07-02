@@ -10,23 +10,23 @@ public class AsalSyilar {
         while (sayac < NOP) {
             boolean isprime = true;
 
-            for (int bölünen= 2; bölünen <= sayi/2; bölünen++) {
+            for (int bölünen = 2; bölünen <= sayi / 2; bölünen++) {
                 if (sayi % bölünen == 0) {
                     isprime = false;
                     break;
                 }
             }
-                if (isprime) {
-                    sayac++;
-                    if (sayac %  per_line == 0) {
-                        System.out.println(sayi);
-                    }else {
-                        System.out.print(sayi + " ");
-                    }
+            if (isprime) {
+                sayac++;
+                if (sayac % per_line == 0) {
+                    System.out.println(sayi);
+                } else {
+                    System.out.print(sayi + " ");
                 }
-sayi++;
             }
+            sayi++;
         }
-
     }
+
+}
 
