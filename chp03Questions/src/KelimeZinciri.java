@@ -40,7 +40,6 @@ public class KelimeZinciri {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-
         System.out.print("Oynayacak kişi sayısını girin: ");
         int oyuncuSayisi = scanner.nextInt();
         scanner.nextLine();
@@ -50,12 +49,9 @@ public class KelimeZinciri {
             System.out.print((i + 1) + ". oyuncunun adını girin: ");
             oyuncular.add(scanner.nextLine());
         }
-
-
         System.out.print("Her tur için süre limitini saniye cinsinden girin: ");
         long sureLimiti = scanner.nextLong() * 1000;
         scanner.nextLine();
-
 
         Set<String> kullanilmisKelimeler = new HashSet<>();
         String sonKelime = "elma";
@@ -65,7 +61,6 @@ public class KelimeZinciri {
         System.out.println("İlk kelime: " + sonKelime);
         System.out.println("-------------------------------------");
 
-
         while (oyuncular.size() > 1) {
             String gecerliOyuncu = oyuncular.get(gecerliOyuncuIndex);
             char sonHarf = sonKelime.charAt(sonKelime.length() - 1);
@@ -73,10 +68,8 @@ public class KelimeZinciri {
             System.out.printf("\nSıra %s'de! Kelime '%s' harfiyle başlamalı.\n", gecerliOyuncu, sonHarf);
             System.out.printf("Kelime girmek için %d saniyen var.\n", sureLimiti / 1000);
 
-
             long baslangicZamani = System.currentTimeMillis();
             String yeniKelime = null;
-
 
             while (System.currentTimeMillis() - baslangicZamani < sureLimiti) {
                 System.out.print("Yeni kelime: ");
@@ -87,8 +80,6 @@ public class KelimeZinciri {
                     }
                 }
             }
-
-
             if (yeniKelime == null || yeniKelime.isEmpty() || System.currentTimeMillis() - baslangicZamani >= sureLimiti) {
                 System.out.printf("Süre doldu, %s elendi!\n", gecerliOyuncu);
                 oyuncular.remove(gecerliOyuncuIndex);
@@ -97,8 +88,6 @@ public class KelimeZinciri {
                 }
                 continue;
             }
-
-
             if (yeniKelime.charAt(0) != sonHarf) {
                 System.out.printf("Kelimeniz '%s' ile başlamalıydı, %s elendi!\n", sonHarf, gecerliOyuncu);
                 oyuncular.remove(gecerliOyuncuIndex);
@@ -116,8 +105,6 @@ public class KelimeZinciri {
                 gecerliOyuncuIndex = (gecerliOyuncuIndex + 1) % oyuncular.size();
             }
         }
-
-
         if (oyuncular.size() == 1) {
             System.out.println("\nOyun bitti! Kazanan: " + oyuncular.get(0));
         } else {
