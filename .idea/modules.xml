@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Main.iml" filepath="$PROJECT_DIR$/Main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VeriTabaniDeneme/VeriTabaniDeneme.iml" filepath="$PROJECT_DIR$/VeriTabaniDeneme/VeriTabaniDeneme.iml" />
       <module fileurl="file://$PROJECT_DIR$/chp03Questions/chp03Questions.iml" filepath="$PROJECT_DIR$/chp03Questions/chp03Questions.iml" />
       <module fileurl="file://$PROJECT_DIR$/if_else/if_else.iml" filepath="$PROJECT_DIR$/if_else/if_else.iml" />
     </modules>
